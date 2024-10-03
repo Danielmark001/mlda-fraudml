@@ -1,18 +1,19 @@
 # Credit Card Fraud Detection
-A machine learning-powered application that detects fraudulent transactions. This repository contains both the backend (Flask) and frontend (React) code for processing transactions, allowing users to upload data for batch processing, and monitoring real-time transaction status using a dashboard.
+A machine learning-powered web application designed for banks to detect credit card fraud in real-time. This solution enables banks to process bulk transaction data, monitor real-time fraud activities, and utilize actionable insights to mitigate risks associated with fraudulent transactions.
 
 ## Features
-- File Upload: Allows users to upload a CSV file containing multiple transactions for batch processing.
-- Real-Time Monitoring: Displays incoming transactions and their fraud status in real-time.
-- Progress Bar: Shows upload progress during file processing.
-- Transaction Filtering: Includes options to filter transactions by amount, risk level, and date.
-- Summary Statistics: Visualizes key metrics like transaction distribution and fraud detection rates.
+- **File Upload:** Allows users to upload a CSV file containing multiple transactions for batch processing.
+- **Real-Time Monitoring:** Displays incoming transactions and their fraud status in real-time.
+- **Progress Bar:** Shows upload progress during file processing.
+- **Filtering:** Use filters to focus on transactions of particular interest, such as those with high risk or exceeding a specific amount, making it easy to drill down into potential fraudulent activity.
+- **Summary Statistics:** Analyze visualized data, including transaction distributions and fraud detection rates, to understand fraud patterns within the bank's transactions.
+- **Feedback Loop:** Fraud analysts can mark transactions that have been incorrectly flagged, providing data for future model improvement and making the system more adaptive to new fraud tactics.
   
 ## Technologies Used
-- Frontend: React, Axios, HTML, CSS
-- Backend: Flask, Flask-CORS, Pandas, Joblib
-- Model: Machine learning model (Decision Trees, MLP Classifier, Ramdom Forest Model, Neural Network, Gradient Boosting) trained for fraud detection using a transaction dataset.
-- Additional Libraries: Chart.js or Recharts for graphs and visualizations (frontend).
+- **Frontend:** React, Axios, HTML, CSS
+- **Backend:** Flask, Flask-CORS, Pandas, Joblib
+- **Model:** Machine learning model (Decision Trees, MLP Classifier, Ramdom Forest Model, Neural Network, Gradient Boosting) trained for fraud detection using a transaction dataset.
+- **Additional Libraries:** Chart.js or Recharts for graphs and visualizations (frontend).
   
 ## Getting Started
 ### Prerequisites
@@ -61,12 +62,6 @@ npm start
 ````
 The `frontend` will run on `http://localhost:3000.`
 
-## Usage
-- Upload a CSV File: On the web interface, use the file upload section to upload a transactions CSV for batch processing. You can download a sample CSV template from the provided link to format your data correctly.
-- Monitor Transactions: Use the real-time monitoring dashboard to view the transaction feed, apply filters, and see the model's fraud status for each transaction.
-- Customize and Filter: Adjust filters (e.g., transaction amount, risk level, date range) to navigate through the transaction data efficiently.
-- Feedback: Use the "Mark as Incorrect" button to provide feedback on the model's predictions to improve future retraining.
-
 ## User Guide
 ### **1. Upload Transactions for Batch Processing**
 Go to the **Upload Transactions** section in the app.
@@ -87,3 +82,8 @@ A sample CSV template (`sample-template.csv`) is provided in the frontend/public
 - **POST /upload:** Uploads a CSV file for batch processing.
 - **GET /transactions:** Retrieves the latest transactions for real-time monitoring.
 - **POST /feedback:** Allows users to submit feedback on the model's predictions for future improvements.
+- 
+## Future Enhancements
+- **Integration with Bank Systems:** Enable integration with the bank's transaction processing systems for real-time fraud monitoring.
+- **Enhanced Authentication:** Add user roles and authentication to control access based on user responsibilities within the bank.
+- **Data Storage:** Introduce database support to store transaction history and feedback securely.
