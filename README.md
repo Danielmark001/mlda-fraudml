@@ -72,7 +72,7 @@ Adjust model sensitivity in the settings section (if available).
 Use the feedback loop to mark incorrect predictions, helping to improve the model in future versions.
 
 ## Sample CSV Template
-A sample CSV template (`sample-template.csv`) is provided in the frontend/public directory. Users can download and format their transaction data accordingly for batch processing.
+A sample CSV template (`sample-template.csv`) is provided in the `frontend/public` directory. Users can download and format their transaction data accordingly for batch processing.
 
 ## API Endpoints
 - **POST /upload:** Uploads a CSV file for batch processing.
