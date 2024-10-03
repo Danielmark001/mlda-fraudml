@@ -21,57 +21,69 @@ A machine learning-powered application that detects fraudulent transactions. Thi
 - Recommended Python libraries: flask, flask-cors, pandas, joblib, sklearn.
   
 ## Installation
-1. Clone the Repository
+**1. Clone the Repository**
 ```bash
 git clone https://github.com/yourusername/credit-card-fraud-detection.git
 cd credit-card-fraud-detection
 ```
-2. Backend Setup (Flask)
-Navigate to the backend directory and set up the Flask server.
+**2. Backend Setup (Flask)**
+Navigate to the `backend` directory and set up the Flask server.
 ```bash
 Copy code
 cd backend
 pip install -r requirements.txt
 ```
 
-3. Frontend Setup (React)
+**3. Frontend Setup (React)**
 Navigate to the frontend directory and install the necessary packages.
 
 ```bash
 Copy code
 cd ../frontend
 npm install
+```
 
 ## Running the Application
-1. Start the Backend (Flask)
-bash
+**1. Start the Backend (Flask)**
+````bash
 Copy code
 cd backend
 python app.py
-The backend will run on http://localhost:5000.
-
-2. Start the Frontend (React)
+The backend will run on `http://localhost:5000.`
+````
+**2. Start the Frontend (React)**
 In a new terminal window, start the React development server:
 
-bash
+````bash
 Copy code
 cd frontend
 npm start
-The frontend will run on http://localhost:3000.
-Usage
-Upload a CSV File: On the web interface, use the file upload section to upload a transactions CSV for batch processing. You can download a sample CSV template from the provided link to format your data correctly.
-Monitor Transactions: Use the real-time monitoring dashboard to view the transaction feed, apply filters, and see the model's fraud status for each transaction.
-Customize and Filter: Adjust filters (e.g., transaction amount, risk level, date range) to navigate through the transaction data efficiently.
-Feedback: Use the "Mark as Incorrect" button to provide feedback on the model's predictions to improve future retraining.
-File Structure
-bash
-Copy code
-credit-card-fraud-detection/
+````
+The `frontend` will run on `http://localhost:3000.`
 
-Sample CSV Template
-A sample CSV template (sample-template.csv) is provided in the frontend/public directory. Users can download and format their transaction data accordingly for batch processing.
+## Usage
+- Upload a CSV File: On the web interface, use the file upload section to upload a transactions CSV for batch processing. You can download a sample CSV template from the provided link to format your data correctly.
+- Monitor Transactions: Use the real-time monitoring dashboard to view the transaction feed, apply filters, and see the model's fraud status for each transaction.
+- Customize and Filter: Adjust filters (e.g., transaction amount, risk level, date range) to navigate through the transaction data efficiently.
+- Feedback: Use the "Mark as Incorrect" button to provide feedback on the model's predictions to improve future retraining.
 
-API Endpoints
-POST /upload: Uploads a CSV file for batch processing.
-GET /transactions: Retrieves the latest transactions for real-time monitoring.
-POST /feedback: Allows users to submit feedback on the model's predictions for future improvements.
+## User Guide
+### **1. Upload Transactions for Batch Processing**
+Go to the **Upload Transactions** section in the app.
+Click the "Browse" button to select a CSV file. A sample template is available for download to format your data correctly.
+Click the "Upload" button. A progress bar will indicate the upload status in real-time.
+### **2. Real-Time Monitoring**
+View incoming transactions in the Real-Time Monitoring section.
+Apply filters (amount, risk level, date) to narrow down the displayed transactions.
+View summary statistics with interactive charts showing transaction distribution and fraud detection rates.
+### **3. Customizing Detection Settings**
+Adjust model sensitivity in the settings section (if available).
+Use the feedback loop to mark incorrect predictions, helping to improve the model in future versions.
+
+## Sample CSV Template
+A sample CSV template (`sample-template.csv`) is provided in the frontend/public directory. Users can download and format their transaction data accordingly for batch processing.
+
+## API Endpoints
+- **POST /upload:** Uploads a CSV file for batch processing.
+- **GET /transactions:** Retrieves the latest transactions for real-time monitoring.
+- **POST /feedback:** Allows users to submit feedback on the model's predictions for future improvements.
