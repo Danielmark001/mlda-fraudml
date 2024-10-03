@@ -30,7 +30,6 @@ cd credit-card-fraud-detection
 **2. Backend Setup (Flask)**
 Navigate to the `backend` directory and set up the Flask server.
 ```bash
-Copy code
 cd backend
 pip install -r requirements.txt
 ```
@@ -39,7 +38,6 @@ pip install -r requirements.txt
 Navigate to the frontend directory and install the necessary packages.
 
 ```bash
-Copy code
 cd ../frontend
 npm install
 ```
@@ -47,7 +45,6 @@ npm install
 ## Running the Application
 **1. Start the Backend (Flask)**
 ````bash
-Copy code
 cd backend
 python app.py
 The backend will run on `http://localhost:5000.`
@@ -56,7 +53,6 @@ The backend will run on `http://localhost:5000.`
 In a new terminal window, start the React development server:
 
 ````bash
-Copy code
 cd frontend
 npm start
 ````
