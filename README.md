@@ -28,7 +28,6 @@ cd credit-card-fraud-detection
 ```
 2. Backend Setup (Flask)
 Navigate to the backend directory and set up the Flask server.
-
 ```bash
 Copy code
 cd backend
