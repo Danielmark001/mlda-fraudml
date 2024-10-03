@@ -1,0 +1,62 @@
+/* General styling */
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+/* Styling for the result section */
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Color codes for prediction results */
+.result-text.fraud {
+    color: red;
+    font-weight: bold;
+}
+
+.result-text.non-fraud {
+    color: green;
+    font-weight: bold;
+}
+
+/* Styling for confidence score */
+.confidence {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Risk level styling */
+.risk-level {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Color coding for risk levels */
+.risk-level.low {
+    color: green;
+}
+
+.risk-level.medium {
+    color: orange;
+}
+
+.risk-level.high {
+    color: red;
+}
+
+/* Explanation box */
+.explanation {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
