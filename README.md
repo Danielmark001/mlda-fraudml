@@ -32,6 +32,7 @@ Navigate to the backend directory and set up the Flask server.
 Copy code
 cd backend
 pip install -r requirements.txt
+```
 
 3. Frontend Setup (React)
 Navigate to the frontend directory and install the necessary packages.
