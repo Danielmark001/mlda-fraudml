@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the trained model and scaler
-model = joblib.load('model/gb_model.pkl')
+model = joblib.load('model/nn_model.pkl')
 scaler = joblib.load('model/scaler.pkl')
 
 # In-memory store for incoming transactions (for feedback loop and periodic training)
