@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Upload</title>
+</head>
+<body>
+    <h1>Upload CSV for Fraud Detection</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="file">Upload CSV:</label>
+        <input type="file" name="file" id="file" required><br><br>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if f1 is not none %}
+    <h2>Fraud Detection Metrics</h2>
+    <ul>
+        <li>F1 Score: {{ f1 }}</li>
+        <li>Precision: {{ precision }}</li>
+        <li>Recall: {{ recall }}</li>
+        <li>Accuracy: {{ accuracy }}</li>
+        <li>AUC: {{ roc_auc }}</li>
+    </ul>
+
+    <h2>ROC Curve</h2>
+    <img src="{{ plot_url }}" alt="ROC Curve">
+
+    <h2>Transaction Fraud Predictions</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Transaction Index</th>
+                <th>Fraud Status</th>
+                <th>Fraud Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prediction in fraud_predictions %}
+            <tr>
+                <td>{{ prediction.transaction_index }}</td>
+                <td>{{ prediction.is_fraud }}</td>
+                <td>{{ prediction.fraud_percentage }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</body>
+</html>
