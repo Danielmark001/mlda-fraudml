@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1, h2 {
+            color: #4CAF50;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .metrics ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .metrics li {
+            padding: 8px 0;
+            font-size: 16px;
+        }
+
+        img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .results-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload CSV for Fraud Detection</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="file">Upload CSV:</label>
+            <input type="file" name="file" id="file" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        {% if f1 %}
+        <div class="results-container">
+            <div class="metrics">
+                <h2>Fraud Detection Metrics</h2>
+                <ul>
+                    <li><strong>F1 Score:</strong> {{ f1 }}</li>
+                    <li><strong>Precision:</strong> {{ precision }}</li>
+                    <li><strong>Recall:</strong> {{ recall }}</li>
+                    <li><strong>Accuracy:</strong> {{ accuracy }}</li>
+                    <li><strong>ROC-AUC:</strong> {{ roc_auc }}</li>
+                </ul>
+            </div>
+
+            <h2>ROC Curve</h2>
+            <img src="{{ roc_plot_url }}" alt="ROC Curve">
+
+            <h2>Precision-Recall Curve</h2>
+            <img src="{{ pr_plot_url }}" alt="Precision-Recall Curve">
+        </div>
+        {% endif %}
+
+        <!-- Add a button to navigate to the transaction form page -->
+        <div class="navigation">
+            <h2>Want to Predict a Specific Transaction?</h2>
+            <a href="{{ url_for('predict_transaction') }}">
+                <button>Predict a Transaction</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

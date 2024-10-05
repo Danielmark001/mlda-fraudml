@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Transaction Prediction Form</h1>
+        <form action="/predict_transaction" method="post">
+            <label for="transaction_type">Transaction Type:</label>
+            <select name="transaction_type" id="transaction_type" required>
+                <option value="CASH_IN">CASH_IN</option>
+                <option value="CASH_OUT">CASH_OUT</option>
+                <option value="DEBIT">DEBIT</option>
+                <option value="PAYMENT">PAYMENT</option>
+                <option value="TRANSFER">TRANSFER</option>
+                <option value="PHISHING">PHISHING</option>
+                <option value="PURCHASE">PURCHASE</option>
+                <option value="SALE">SALE</option>
+                <option value="SCAM">SCAM</option>
+            </select>
+
+            <label for="hour_of_day">Hour of Day:</label>
+            <input type="number" name="hour_of_day" id="hour_of_day" min="0" max="23" required>
+
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount" min="0" step="0.01" required>
+
+            <label for="login_frequency">Login Frequency:</label>
+            <input type="number" name="login_frequency" id="login_frequency" min="0" required>
+
+            <label for="session_duration">Session Duration (minutes):</label>
+            <input type="number" name="session_duration" id="session_duration" min="0" required>
+
+            <label for="is_weekend">Is Weekend:</label>
+            <select name="is_weekend" id="is_weekend" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
