@@ -71,4 +71,5 @@ A sample CSV template (`sample-template.csv`) is provided in the `frontend/publi
 
 ## Dataset Source
 Axi, E. (2018). Synthetic Financial Datasets For Fraud Detection [Data set]. Kaggle. https://www.kaggle.com/datasets/ealaxi/paysim1/data
+
 Ward, J. (2024). Metaverse Financial Transactions Dataset. https://www.kaggle.com/datasets/faizaniftikharjanjua/metaverse-financial-transactions-dataset
