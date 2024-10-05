@@ -9,7 +9,7 @@ A machine learning-powered web application designed for banks to detect credit c
 - **Summary Statistics:** Analyze visualized data, including transaction distributions and fraud detection rates, to understand fraud patterns within the bank's transactions.
 - **Feedback Loop:** Fraud analysts can mark transactions that have been incorrectly flagged, providing data for future model improvement and making the system more adaptive to new fraud tactics.
   
-## Technologies Used
+## Tech Stack
 - **Frontend:** React, Axios, HTML, CSS
 - **Backend:** Flask, Flask-CORS, Pandas, Joblib
 - **Model:** Machine learning model (Decision Trees, MLP Classifier, Ramdom Forest Model, Neural Network, Gradient Boosting) trained for fraud detection using a transaction dataset.
