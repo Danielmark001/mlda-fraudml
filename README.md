@@ -24,28 +24,13 @@ A machine learning-powered web application designed for banks to detect credit c
 ## Installation
 **1. Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/credit-card-fraud-detection.git
-cd credit-card-fraud-detection
-```
-**2. Backend Setup (Flask)**
-Navigate to the `backend` directory and set up the Flask server.
-```bash
-cd backend
-pip install -r requirements.txt
-```
-
-**3. Frontend Setup (React)**
-Navigate to the frontend directory and install the necessary packages.
-
-```bash
-cd ../frontend
-npm install
+git clone https://github.com/Danielmark001/fraud-detection-ml.git
+cd fraud-detection-ml
 ```
 
 ## Running the Application
 **1. Start the Backend (Flask)**
 ````bash
-cd backend
 python app.py
 ````
 The backend will run on `http://localhost:5000.`
@@ -54,7 +39,6 @@ The backend will run on `http://localhost:5000.`
 In a new terminal window, start the React development server:
 
 ````bash
-cd frontend
 npm start
 ````
 The `frontend` will run on `http://localhost:3000.`
@@ -79,7 +63,7 @@ A sample CSV template (`sample-template.csv`) is provided in the `frontend/publi
 - **POST /upload:** Uploads a CSV file for batch processing.
 - **GET /transactions:** Retrieves the latest transactions for real-time monitoring.
 - **POST /feedback:** Allows users to submit feedback on the model's predictions for future improvements.
-- 
+
 ## Future Enhancements
 - **Integration with Bank Systems:** Enable integration with the bank's transaction processing systems for real-time fraud monitoring.
 - **Enhanced Authentication:** Add user roles and authentication to control access based on user responsibilities within the bank.
