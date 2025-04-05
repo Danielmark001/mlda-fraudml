@@ -24,8 +24,8 @@ A machine learning-powered web application designed for banks to detect credit c
 ## Installation
 **1. Clone the Repository**
 ```bash
-git clone https://github.com/Danielmark001/fraud-detection-ml.git
-cd fraud-detection-ml
+git clone https://github.com/Danielmark001/MLDA-finfraud.git
+cd MLDA-finfraud
 ```
 
 ## Running the Application
